@@ -1,0 +1,21 @@
+@import '~owl.carousel/src/scss/core';
+@import '~owl.carousel/src/scss/animate';
+@import '~owl.carousel/src/scss/autoheight';
+@import '~owl.carousel/src/scss/lazyload';
+
+.owl-dot {
+  
+  span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+  }
+
+  &.active span {
+    background: #b3b3b3;
+  }
+}

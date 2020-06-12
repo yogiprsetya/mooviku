@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <title>MOOVIKU</title>
+</head>
+<body>
+  <nav-bar class="navbar navbar-expand-lg navbar-light border-bottom py-4"></nav-bar>
+  
+  <movie-detail></movie-detail>
+
+  <section class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#production" class="nav-link" data-toggle="tab">Production</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#cast" class="nav-link active" data-toggle="tab">Full Cast</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#similar" class="nav-link" data-toggle="tab">Similar Movies</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade" id="production">
+        <movie-production class="row mt-5"></movie-production>
+      </div>
+
+      <div class="tab-pane fade show active" id="cast">
+        <movie-cast class="row mt-5"></movie-cast>
+      </div>
+
+      <div class="tab-pane fade" id="similar">
+        <movie-similar class="row mt-5"></movie-similar>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-5 border-top">
+    <div class="container py-4">
+      <span class="text-muted">2020©</span> MOOVIKU
+    </div>
+  </footer>
+  
+</body>
+</html>
