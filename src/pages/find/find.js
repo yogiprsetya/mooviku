@@ -13,7 +13,7 @@ import 'owl.carousel'
 
 customElements.define('nav-bar', Navbar)
 
-customElements.define('genre-detail', class GenreDetail extends HTMLElement {
+customElements.define('finds-detail', class GenreDetail extends HTMLElement {
 
   connectedCallback() {
     const URLParams = new URLSearchParams(window.location.search)

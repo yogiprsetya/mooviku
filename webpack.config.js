@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
@@ -82,35 +83,35 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './src/pages/home/index.html',
-      inject: 'body',
+      inject: true,
       chunks: ['index'],
       filename: 'index.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/pages/home/index.html',
-      inject: 'body',
+      template: './src/pages/movie/movie.html',
+      inject: true,
       chunks: ['movie'],
       filename: 'movie.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/pages/home/index.html',
-      inject: 'body',
+      template: './src/pages/genre/genre.html',
+      inject: true,
       chunks: ['genre'],
       filename: 'genre.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/pages/home/index.html',
-      inject: 'body',
+      template: './src/pages/genre-detail/genre-detail.html',
+      inject: true,
       chunks: ['genredetail'],
       filename: 'genre-detail.html'
     }),
 
     new HtmlWebpackPlugin({
       template: './src/pages/find/find.html',
-      inject: 'body',
+      inject: true,
       chunks: ['find'],
       filename: 'find.html'
     }),
@@ -125,6 +126,15 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
+
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/images'),
+          to: path.resolve(__dirname, 'dist/images')
+        }
+      ]
+    })
   ],
 
   resolve: {
